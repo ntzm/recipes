@@ -55,7 +55,7 @@ set('bin/phinx', function () {
  */
 set('phinx_get_cmd', function () {
     return function ($cmdName, $conf) {
-        $phinx = get('phinx_path') ?: get('bin/phinx');
+        $phinx = get('phinx_path', get('bin/phinx'));
 
         $phinxCmd = "$phinx $cmdName";
 
